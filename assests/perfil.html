@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/script.js"></script>  
+</head>
+<body>
+    <header class="hero-section1">
+        <nav>
+            <div class="logo">
+                <i class="fas fa-feather-alt"></i>
+                <span>Civita</span>
+            </div>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Seja um Prestador</a></li>
+                <li><a href="#">Suporte</a></li>
+                <li>
+                    <a href="#">Conta</a>
+                    <ul class="dropdown-conta">
+                      <li><a href="#">Perfil</a></li>
+                      <li><a href="#">Sair</a></li>
+                    </ul>
+                  </li>
+            </ul>
+            <div class="search-container">
+                <input type="text" placeholder="Pesquisar">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="dropdown-menu">
+                <a href="#">Início</a></li>
+                <a href="#">Sobre Nós</a></li>
+                <a href="#">Serviços</a></li>
+                <a href="#">Seja um Prestador</a></li>
+                <a href="#">Suporte</a></li>
+                <a href="#">Perfil</a></li>
+                <a href="#">Sair</a></li>
+            </div>        
+        </nav>
+        <div class="hero-content">
+            <h1>Bem-vindo <span> à nossa plataforma</span></h1>
+            <p>Explore nossos serviços e saiba mais sobre nós.</p>
+        </div>
+    </header>
+
+    <section class="profile-section">
+        <h2>Detalhes do perfil</h2>
+        <div class="profile-picture">
+            <img id="profileImage" src="./imgs/jcicon.jpeg" alt="Foto do perfil">
+            <input type="file" id="fileInput" style="display: none;" accept="image/*">
+            <div class="buttons">
+                <button onclick="changePhoto()">Mudar foto</button>
+                <button onclick="removePhoto()">Remover</button>
+            </div>
+        </div>
+        
+        <div class="profile-details">
+            <label>Nome</label>
+            <div class="input-group">
+                <input type="text" value="Sem nome" readonly>
+                <button>Editar</button>
+            </div>
+            <label>Nome de usuário</label>
+            <div class="input-group">
+                <input type="text" value="diegozin" readonly>
+                <button>Editar</button>
+            </div>
+            <label>E-mail</label>
+            <p>diego@gmail.com</p>
+        </div>
+    </section>
+
+    <section class="notifications-section">
+        <h2>Notificações</h2>
+        <div class="notification-option">
+            <span>Receber newsletters, promoções e notícias da Civita Serv</span>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <p class="notification-info">A Civita Serv processará seus dados para enviar-lhe informações sobre nossos produtos e serviços...</p>
+        <a href="#" class="delete-account">Excluir conta</a>
+        <a href="#" class="ended-account">Sair da conta</a>
+    </section>
+</body>
+</html>
