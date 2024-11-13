@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Civita Serv</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles6.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <form id="informacoes-adicionais-form">
+            <h1>Informações Adicionais</h1>
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" placeholder="Endereço" required>
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" placeholder="Telefone" required>
+            <label for="nascimento">Data de Nascimento</label>
+            <input type="date" id="nascimento" required>
+            <label for="cpf">CPF</label>
+            <input type="number" id="cpf" placeholder="CPF" required>
+            
+            <div class="gender-info">
+                <label>Qual seu gênero?</label>
+            </div>
+            
+            <div class="gender-options">
+                <input type="radio" name="genero" value="Homem Cis" id="homem">
+                <label for="homem">Homem Cis</label><br>
+                <input type="radio" name="genero" value="Mulher Cis" id="mulher">
+                <label for="mulher">Mulher Cis</label><br>
+                <input type="radio" name="genero" value="Outro" id="outro">
+                <label for="outro">Outro</label>
+            </div>
+
+            <input type="text" placeholder="Informe outro gênero" id="outro-genero">
+            <button type="submit" id="completar-cadastro">Completar cadastro</button>
+            <button type="button" id="voltar-botao">Voltar</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

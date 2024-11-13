@@ -6,9 +6,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f9f9f9;
     color: #333;
-    padding: 20px;
 }
 
 .profile-section, .notifications-section {
@@ -21,8 +19,13 @@ body {
 }
 
 .hero-section1 {
-    margin-bottom: 20px; 
+    background-size: cover;
+    background-image: url('../imgs/space-astronomy-sphere-galaxy_53876-403594.jpg');
+    padding: 60px 80px;
     text-align: center;
+    position: relative;
+    height: 100vh;
+    background-size: cover;
 }
 
 h2 {
