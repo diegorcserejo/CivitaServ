@@ -16,11 +16,16 @@
                 <span>Civita</span>
             </div>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Seja um Prestador</a></li>
-                <li><a href="#">Suporte</a></li>
+                <li><a href=""
+                    class="menu">Início</a></li>
+                <li><a href=""
+                    class="menu">Sobre Nós</a></li>
+                <li><a href=""
+                    class="menu">Serviços</a></li>
+                <li><a href=""
+                    class="menu">Seja um Prestador</a></li>
+                <li><a href=""
+                    class="menu">Suporte</a></li>
                 <li>
                     <a href="#">Conta</a>
                     <ul class="dropdown-conta">
@@ -32,9 +37,6 @@
             <div class="search-container">
                 <input type="text" placeholder="Pesquisar">
                 <button class="search-btn"><i class="fas fa-search"></i></button>
-            </div>
-            <div class="menu-icon">
-                <i class="fas fa-bars"></i>
             </div>
             <div class="dropdown-menu">
                 <a href="#">Início</a></li>
@@ -52,6 +54,55 @@
         </div>
     </header>
 
+    <div class="search-section">
+        <h2>Buscar Prestadores de Serviços</h2>
+        <div class="search-container">
+            <div class="filter-box">
+                <div class="filter-item">
+                    <label for="service-type">Tipo de Serviço</label>
+                    <select id="service-type">
+                        <option value="">Selecione o tipo</option>
+                        <option value="reforma">Reforma</option>
+                        <option value="limpeza">Limpeza</option>
+                        <option value="eletricista">Eletricista</option>
+                        <option value="encanador">Encanador</option>
+                        <option value="jardinagem">Jardinagem</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label for="price-range">Faixa de Preço</label>
+                    <select id="price-range">
+                        <option value="">Selecione a faixa</option>
+                        <option value="0-100">Até R$100</option>
+                        <option value="100-500">R$100 - R$500</option>
+                        <option value="500-1000">R$500 - R$1000</option>
+                        <option value="1000-5000">Acima de R$1000</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label for="location">Localização</label>
+                    <input type="text" id="location" placeholder="Insira a cidade ou CEP">
+                </div>
+                <div class="filter-item">
+                    <label for="service-date">Data do Serviço</label>
+                    <input type="date" id="service-date">
+                </div>
+                <div class="filter-item">
+                    <label for="rating">Avaliação</label>
+                    <select id="rating">
+                        <option value="">Selecione a avaliação</option>
+                        <option value="5">5 Estrelas</option>
+                        <option value="4">4 Estrelas ou mais</option>
+                        <option value="3">3 Estrelas ou mais</option>
+                    </select>
+                </div>
+                <div class="filter-item button-container">
+                    <button class="search-button">Buscar</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
     <section class="services">
         <h2>Serviços Que Oferecemos</h2>
         <div class="service-cards">
