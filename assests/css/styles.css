@@ -9,6 +9,10 @@ body {
     color: #0000;
 }
 
+button.search-button {
+    margin-top: 20px;
+}
+
 header.hero-section {
     background-size: cover;
     background-image: url('../imgs/space-astronomy-sphere-galaxy_53876-403594.jpg');
@@ -17,6 +21,101 @@ header.hero-section {
     position: relative;
     height: 80vh;
     background-size: cover;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 20px;
+    margin-top: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.encanador-info {
+    flex: 1;
+    padding: 0 20px;
+    text-align: left; 
+}
+
+.encanador-info .name {
+    font-size: 2rem;
+    font-weight: bold;
+    color:white;
+}
+
+.encanador-info .description {
+    font-size: 0.9rem; 
+    color: white;
+    margin-top: 10px;
+    max-width: 250px; 
+    line-height: 1.4; 
+    text-align: left; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.encanador {
+    width: 230px;
+    height: 230px;
+    margin: 0 20px;
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.ambiente {
+    width: 100%; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: -1; 
+    height: 100%;
+    object-fit: cover; 
+}
+
+.info-wrapper {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2; 
+}
+
+.wrapper {
+    text-align: center;
+    margin: 10px 0; 
+}
+
+.info {
+    font-weight: bold;
+    color: white;
+}
+
+.year, .type, .radius {
+    font-size: 1.1rem;
+    color: white;
+}
+
+button.left, button.right {
+    background-color: #1e90ff;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.left:hover, button.right:hover {
+    background-color: #4682b4;
 }
 
 .search-section h2 {
@@ -34,47 +133,44 @@ header.hero-section {
 
 .filter-box {
     background-color: #004c99;
-    padding: 60px;
+    padding: 40px;
     border-radius: 8px;
-    width: 100vw; 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 55px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
     color: white;
-    margin: 0; 
-    flex-wrap: nowrap;
-    margin-top: 40px; 
-    box-sizing: border-box; 
+    margin-top: 40px;
+    box-sizing: border-box;
 }
 
 .filter-item {
-    flex: 1;
-    min-width: 150px;
+    display: flex;
+    flex-direction: column;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 select, input[type="text"], input[type="date"] {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     border-radius: 4px;
     border: none;
-}
-
-.button-container {
-    text-align: center;
+    font-size: 1rem;
 }
 
 .search-button {
-    background-color: #ff4500;
-    color: white;
-    padding: 10px 20px;
+    background-color: #ffffff;
+    border: #007BFF;
+    color: #007BFF;
+    padding: 12px 25px;
     font-size: 16px;
+    font-weight: bold;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -82,21 +178,113 @@ select, input[type="text"], input[type="date"] {
 }
 
 .search-button:hover {
-    background-color: #e03e00;
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 1024px) {
+    .filter-box {
+        padding: 20px;
+    }
+
+    .filter-item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .search-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .filter-box {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .search-btn {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .filter-item label {
+        font-size: 0.9rem;
+    }
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input {
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+}
+
+.search-btn {
+    background-color: #00c0f0;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.search-btn i {
+    font-size: 18px;
+}
+
+.search-container input:focus {
+    border-color: #004c99;
+    box-shadow: 0 0 8px rgba(0, 184, 255, 0.5);
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    position: relative;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .logo {
     display: flex;
     align-items: center;
     font-size: 24px;
+    color: white;
 }
 
 span {
@@ -110,67 +298,42 @@ span {
 
 ul {
     display: flex;
-    gap: 1rem;
     list-style: none;
-    font-size: 20px;
-}
-
-a {
-    color: #00c0f0;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-}
- 
-a:hover {
-    color: #004c99;
+    gap: 30px;
 }
 
 ul li {
-    color: #fff;
-    display: grid;
-    place-content: center;
-    margin: 0;
+    position: relative;
 }
 
-.menu {
-    position: relative;
-    color: #00c0f0;
+ul li a {
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.menu:hover {
-    color: #004c99;
+ul li a:hover {
+    color: #00c0f0;
+    transform: translateY(-3px);
 }
 
-.menu::after {
+
+ul li a::after {
     content: "";
     position: absolute;
+    bottom: -5px;
     left: 0;
-    bottom: -5px; 
     width: 100%;
-    height: 2px; 
+    height: 2px;
     background-color: #ffffff;
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
 
-.menu:hover::after {
+ul li a:hover::after {
     transform: scaleX(1);
-}
-
-
-ul li a {
-    color: #00c0f0;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-ul li a:hover {
-    color: #004c99;
 }
 
 ul li ul.dropdown-conta {
@@ -219,6 +382,74 @@ ul li:hover .dropdown-conta {
 @media (max-width: 768px) {
     .dropdown-conta {
         width: 100%;
+    }
+}
+
+.search-button {
+    background-color: #ffffff;
+    border: #007BFF;
+    color: #007BFF;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #007BFF;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 1024px) {
+    .filter-box {
+        padding: 20px;
+    }
+
+    .filter-item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .search-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-conta {
+        width: 100%;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    .filter-item label {
+        font-size: 0.9rem;
     }
 }
 
