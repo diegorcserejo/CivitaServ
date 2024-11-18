@@ -10,14 +10,14 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('../imgs/purple-astronomy-nature-night_53876-251396.jpg') no-repeat center center fixed;
+    background: url('../imgs/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vNjkxZGEzZjQtNDJmMi00MjNkLTk1MDUtNTY2Nzk4ODYzNWIwLmpwZWc.png') no-repeat center center fixed;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
 .container {
-    background-color: #ffffff;
-    border-radius: 15px;
+    background: transparent;
+    border-radius: 30px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     width: 70%;
     max-width: 500px;
@@ -26,18 +26,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 3px solid rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(20px); 
+    overflow: hidden;
+    justify-content: center;
+    
 }
 
 h1 {
     font-size: 26px;
-    color: #004c99;
+    color: #00c0f0;
     margin-bottom: 20px;
     text-align: center;
 }
 
 label {
     font-size: 14px;
-    color: #333;
+    color: #00c0f0;
     margin-top: 15px;
     margin-bottom: 5px;
     display: block;

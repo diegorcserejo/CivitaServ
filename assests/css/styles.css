@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: #0000;
 }
 
@@ -15,11 +15,11 @@ button.search-button {
 
 header.hero-section {
     background-size: cover;
-    background-image: url('../imgs/space-astronomy-sphere-galaxy_53876-403594.jpg');
+    background-image: url('../imgs/The\ Rapid\ Birth\ of\ ZVideo\ Introduction\ Video_.gif');
     padding: 50px 60px;
     text-align: center;
     position: relative;
-    height: 80vh;
+    height: 100vh;
     background-size: cover;
 }
 
@@ -284,16 +284,16 @@ nav {
     display: flex;
     align-items: center;
     font-size: 24px;
-    color: white;
+    color: #052681;
 }
 
 span {
-    color: #00c0f0;
+    color: #004c99;
 }
 
 .logo i {
     margin-right: 10px;
-    color: #00c0f0;
+    color: #052681;
 }
 
 ul {
@@ -307,7 +307,7 @@ ul li {
 }
 
 ul li a {
-    color: #ffffff;
+    color: #052681;
     text-decoration: none;
     font-weight: 600;
     font-size: 18px;
@@ -319,7 +319,6 @@ ul li a:hover {
     transform: translateY(-3px);
 }
 
-
 ul li a::after {
     content: "";
     position: absolute;
@@ -327,7 +326,7 @@ ul li a::after {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #ffffff;
+    background-color: #052681;
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -455,7 +454,7 @@ ul li:hover .dropdown-conta {
 
 .btn {
     padding: 10px 20px;
-    background-color: #00c0f0;
+    background-color: #052681;
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
@@ -464,7 +463,7 @@ ul li:hover .dropdown-conta {
 }
 
 .btn:hover {
-    background-color: #007ab3;
+    background-color: #1d4bca;
 }
 
 .hero-content {
@@ -476,27 +475,30 @@ ul li:hover .dropdown-conta {
 .hero-content h1 {
     font-size: 3em;
     font-weight: 700;
-    color: #00c0f0;
+    color: #052681;
     margin-bottom: 20px;
+    margin-top: 400px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     line-height: 1.2;
 }
 
 .hero-content h1 span {
-    color: #004c99;
+    color: #052681;
     text-decoration: underline;
     font-style: italic;
+    align-self: center;
 }
 
 .hero-content p {
-    font-size: 1.1em;
-    margin-top: 15px;
-    color: #00c0f0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #052681;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
     opacity: 0.9;
+    align-self: center;
 }
 
 .search-container {
@@ -604,7 +606,10 @@ ul li:hover .dropdown-conta {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
-    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .value-card {
@@ -682,7 +687,8 @@ ul li:hover .dropdown-conta {
 
 .contact {
     padding: 60px 20px;
-    background: linear-gradient(135deg, #00b8ff, #004c99);
+    background: linear-gradient(#065ab4,#007BFF);
+    opacity: calc(0.9);
     text-align: center;
     color: #fff;
     border-radius: 15px;
@@ -693,7 +699,7 @@ ul li:hover .dropdown-conta {
     font-size: 2.5rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 40px;
 }
 
@@ -708,9 +714,9 @@ ul li:hover .dropdown-conta {
 .contact input, .contact textarea {
     padding: 15px;
     border-radius: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #004c99;
     font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Libre Baskerville', sans-serif;
     color: #333;
     transition: all 0.3s ease-in-out;
 }
@@ -724,17 +730,17 @@ ul li:hover .dropdown-conta {
 .contact button {
     padding: 15px 30px;
     border-radius: 30px;
-    background-color: #00b8ff;
+    background-color: #052681;
     color: #fff;
     font-size: 1.2rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Libre Baskerville', sans-serif;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
 .contact button:hover {
-    background-color: #008cba;
+    background-color: #007BFF;
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
@@ -833,7 +839,7 @@ footer {
 
 .feedbacks {
     padding: 60px 20px;
-    background-color: #f0f0f0;
+    background-color: #ffff;
     background-size: 40px 40px;
     text-align: center;
     color: #333;
@@ -853,7 +859,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    justify-content: center; 
+    justify-items: center;
 }
 
 .feedback-card {
@@ -861,7 +867,7 @@ footer {
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
+    transition: none;
     overflow: hidden;
     max-width: 320px;
     text-align: center;
@@ -869,8 +875,8 @@ footer {
 }
 
 .feedback-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .feedback-card:hover::before {
@@ -896,7 +902,7 @@ footer {
 
 .feedback-card h4 {
     font-size: 1.4rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 500;
     color: #333;
     margin-bottom: 15px;
@@ -910,7 +916,7 @@ footer {
 
 .feedback-card p {
     font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Libre Baskerville', sans-serif;
     color: #555;
     line-height: 1.5;
     margin-top: 15px;
@@ -987,7 +993,7 @@ footer {
 .sobre-imagem img {
     width: 100%;
     height: auto;
-    max-width: 300px;
+    max-width: 420px;
     border-radius: 10px;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;

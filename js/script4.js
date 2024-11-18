@@ -11,7 +11,7 @@ document.getElementById('informacoes-adicionais-form').addEventListener('submit'
         document.getElementById('sucesso').style.display = 'block';
 
         setTimeout(function() {
-            window.location.href = 'login.html';
+            window.location.href = 'login+cadastro.html';
         }, 2000);  
     } else {
         alert('Por favor, preencha todos os campos corretamente!');
@@ -19,5 +19,5 @@ document.getElementById('informacoes-adicionais-form').addEventListener('submit'
 });
 
 document.getElementById('voltar-botao').addEventListener('click', function() {
-    window.location.href = 'login.html';
+    window.location.href = 'login+cadastro.html';
 });
