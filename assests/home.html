@@ -1,3 +1,8 @@
+
+Aqui está o seu código HTML completo com os botões de navegação (← e →) inseridos corretamente dentro de cada conteúdo de profissional. Os botões de navegação foram colocados nas seções de cada conteúdo para navegação entre eles, como você solicitou.
+
+html
+Copiar código
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -90,23 +95,22 @@
                 </select>
             </div>
             <div class="filter-item button-container">
-                <button class="search-button">Buscar</button>
+                <button class="search-button" onclick="filterProfession()">Continuar</button>
             </div>
         </div>
-    </div>   
-
+    </div>
+    
     <div class="content-wrapper encanador-content" id="encanador-info" style="display: none;">
         <button class="left">←</button>
-        <div class="encanador-info">
+        <div class="profissao-info">
             <p class="name">Adriano</p>
             <p class="description">
-                Encanador especializado em sistemas de tubulação residencial
-                e comercial. Conhecido pela precisão e rapidez na solução de
-                vazamentos e instalação de encanamentos modernos.
+                Encanador especializado em sistemas de tubulação residencial e comercial.
+                Conhecido pela precisão e rapidez na solução de vazamentos e instalação de encanamentos modernos.
             </p>
         </div>
-        <img src="./imgs/piso1.jpg" alt="ambiente" class="ambiente" />
-        <img src="./imgs/enc1.jpg" alt="encanador" class="encanador" />
+        <img src="./imgs/blue-a" alt="ambiente" class="ambiente" />
+        <img src="./imgs/enc1.png" alt="encanador" class="profissao" />
         <div class="info-wrapper">
             <div class="wrapper">
                 <p class="info">IDADE</p>
@@ -122,7 +126,120 @@
             </div>
         </div>
         <button class="right">→</button>
-    </div>    
+    </div>   
+
+    <div class="content-wrapper eletricista-content" id="eletricista-info" style="display: none;">
+        <button class="left">←</button>
+        <div class="profissao-info">
+            <p class="name">Carlos</p>
+            <p class="description">
+                Eletricista especializado em instalações residenciais
+                e comerciais. Conhecido pela segurança e eficiência
+                em resolver problemas elétricos
+            </p>
+        </div>
+        <img src="./imgs/bluea.jpg" alt="ambiente" class="ambiente" />
+        <img src="./imgs/eletri1.png" alt="eletricista" class="profissao" />
+        <div class="info-wrapper">
+            <div class="wrapper">
+                <p class="info">IDADE</p>
+                <span class="year">30 anos</span>
+            </div>
+            <div class="wrapper">
+                <p class="info">AVALIAÇÕES</p>
+                <span class="type">4.5 estrelas</span>
+            </div>
+            <div class="wrapper">
+                <p class="info">SERVIÇOS</p>
+                <span class="radius">Consultoria Técnica</span>
+            </div>
+        </div>
+        <button class="right">→</button>
+    </div>
+
+    <div class="content-wrapper reforma-content" id="reforma-info" style="display: none;">
+        <button class="left">←</button>
+        <div class="profissao-info">
+            <p class="name">Roberto</p>
+            <p class="description">
+                Especialista em reformas de ambientes internos e externos. 
+                Conhecido pela criatividade em projetos e pela entrega dentro do prazo.
+            </p>
+        </div>
+        <img src="./imgs/blue-a" alt="ambiente" class="ambiente" />
+        <img src="./imgs/reforma1.png" alt="reforma" class="profissao" />
+        <div class="info-wrapper">
+            <div class="wrapper">
+                <p class="info">IDADE</p>
+                <span class="year">40 anos</span>
+            </div>
+            <div class="wrapper">
+                <p class="info">AVALIAÇÕES</p>
+                <span class="type">4.8 estrelas</span>
+            </div>
+            <div class="wrapper">
+                <p class="info">SERVIÇOS</p>
+                <span class="radius">Reformas Completas e Pequenas Restaurações</span>
+            </div>
+        </div>
+        <button class="right">→</button>
+    </div>
+
+    <div class="content-wrapper jardinagem-content" id="jardinagem-info" style="display: none;">
+        <button class="left">←</button>
+        <div class="profissao-info">
+            <p class="name">Joana</p>
+            <p class="description">
+                Jardineira experiente em paisagismo e manutenção de jardins. 
+                Especialista em criar ambientes verdes harmônicos e agradáveis.
+            </p>
+        </div>
+        <img src="./imgs/blue-a" alt="ambiente" class="ambiente" />
+        <img src="./imgs/jardinagem1.png" alt="jardinagem" class="profissao" />
+        <div class="info-wrapper">
+            <div class="wrapper">
+                <p class="info">IDADE</p>
+                <span class="year">35 anos</span>
+            </div>
+            <div class="wrapper">
+                <p class="info">AVALIAÇÕES</p>
+                <span class="type">4.7 estrelas</span>
+            </div>
+            <div class="wrapper">
+                <p class="info">SERVIÇOS</p>
+                <span class="radius">Paisagismo e Jardinagem</span>
+            </div>
+        </div>
+        <button class="right">→</button>
+    </div>
+
+    <div class="content-wrapper limpeza-content" id="limpeza-info" style="display: none;">
+        <button class="left">←</button>
+        <div class="profissao-info">
+            <p class="name">Ana</p>
+            <p class="description">
+                Profissional de limpeza com experiência em residências e escritórios. 
+                Focada em eficiência e cuidado em cada detalhe do ambiente.
+            </p>
+        </div>
+        <img src="./imgs/blue-a" alt="ambiente" class="ambiente" />
+        <img src="./imgs/limpeza1.png" alt="limpeza" class="profissao" />
+        <div class="info-wrapper">
+            <div class="wrapper">
+                <p class="info">IDADE</p>
+                <span class="year">28 anos</span>
+            </div>
+            <div class="wrapper">
+                <p class="info">AVALIAÇÕES</p>
+                <span class="type">4.9 estrelas</span>
+            </div>
+            <div class="wrapper">
+                <p class="info">SERVIÇOS</p>
+                <span class="radius">Limpeza Geral e Pós-Obra</span>
+            </div>
+        </div>
+        <button class="right">→</button>
+    </div>
     
     <section class="services">
         <h2>Alguns Serviços Que Oferecemos</h2>
