@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueceu Sua Senha</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
+    <link rel="stylesheet" href="css/stylesesqsenha.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="col-2">
+                <h1>Esqueceu Sua Senha?</h1>
+                <p>Informe seu e-mail abaixo e enviaremos um link para recuperação.</p>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <button type="button" id="sendButton">Enviar</button>
+                <button type="button" onclick="window.history.back()">Voltar</button>
+                <div class="message hidden" id="message">Link de recuperação enviado! Verifique seu e-mail.</div>
+            </div>
+        </div>
+    </div>
+    <script src="..js/scriptesqsenha.js"></script>
+</body>
+</html>

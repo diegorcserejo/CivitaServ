@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Civita Serv</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/styles4.css">
+    <link rel="stylesheet" href="css/styleshome.css">
+    <link rel="stylesheet" href="css/stylesperfil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -20,27 +20,16 @@
             </div>
             
             <ul class="menu">
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Seja um Prestador</a></li>
-                <li><a href="#">Suporte</a></li>
-                <li class="dropdown">
-                    <a href="#">Conta</a>
-                    <ul class="dropdown-conta">
-                        <li><a href="perfil.html">Perfil</a></li>
-                        <li><a href="login.html">Sair</a></li>
-                    </ul>
-                </li>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="#suporte">Suporte</a></li>
+                <li><a href="login+cadastro.html">Sair</a></li>
             </ul>
             <div class="dropdown-menu">
-                <a href="#">Início</a>
-                <a href="#">Sobre Nós</a>
-                <a href="#">Serviços</a>
-                <a href="#">Seja um Prestador</a>
-                <a href="#">Suporte</a>
+                <a href="home.html">Início</a>
+                <a href="#suporte">Suporte</a>
                 <a href="perfil.html">Perfil</a>
-                <a href="login.html">Sair</a>
+                <a href="login+cadastro.html">Sair</a>
             </div>        
         </nav>
         <div class="hero-content">
@@ -89,6 +78,21 @@
         <a href="#" class="delete-account">Excluir conta</a>
         <a href="#" class="ended-account">Sair da conta</a>
     </section>
-    <script src="../js/scritp5.js"></script>
+
+    <section class="contact">
+        <h2 id="contato">Entre em Contato</h2>
+        <form>
+            <input type="text" placeholder="Nome">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Mensagem"></textarea>
+            <button type="submit" class="btn">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Astrosync - Todos os direitos reservados..</p>
+    </footer>
+    
+    <script src="../js/scriptperfil.js"></script>
 </body>
 </html>

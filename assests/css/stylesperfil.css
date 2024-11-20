@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    color: #333;
+}
+
+.profile-section, .notifications-section {
+    max-width: 600px;
+    margin: 0 auto;  
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section1 {
+    background-size: cover;
+    background-image: url('../imgs/5525305.jpg');
+    padding: 50px 60px;
+    text-align: center;
+    position: relative;
+    height: 80vh;
+    background-size: cover;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.profile-picture {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px; /
+}
+
+.profile-picture .buttons {
+    display: flex;
+    flex-direction: row; 
+    gap: 15px; 
+}
+
+.profile-picture button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border: none;
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.profile-details label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+}
+
+.input-group button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border: none;
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.notifications-section .notification-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.notification-info {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}
+
+.delete-account {
+    display: inline-block;
+    margin-top: 15px;
+    color: #d9534f;
+    text-decoration: none;
+}
+
+.delete-account:hover {
+    text-decoration: underline;
+}
+
+.ended-account {
+    display: block; 
+    margin-top: 15px;
+    color: #004c99;
+    text-decoration: none;
+}
+
+.ended-account:hover {
+    text-decoration: underline;
+}

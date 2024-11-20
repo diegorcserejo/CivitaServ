@@ -1,70 +1,57 @@
-
-Aqui está o seu código HTML completo com os botões de navegação (← e →) inseridos corretamente dentro de cada conteúdo de profissional. Os botões de navegação foram colocados nas seções de cada conteúdo para navegação entre eles, como você solicitou.
-
-html
-Copiar código
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Civita Serv</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styleshome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="hero-section">
         <nav>
             <div class="logo">
-                <i class="fas fa-feather-alt"></i>
-                <span>Civita</span>
             </div>
             <div class="menu-icon" id="menu-icon">
                 <i class="fas fa-bars"></i>
             </div>
             
-            <ul class="menu">
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Seja um Prestador</a></li>
-                <li><a href="#">Suporte</a></li>
-                <li class="dropdown">
-                    <a href="#">Conta</a>
-                    <ul class="dropdown-conta">
-                        <li><a href="perfil.html">Perfil</a></li>
-                        <li><a href="login.html">Sair</a></li>
-                    </ul>
+            <ul class="menu" id="menu">
+                <li><a href="home.html">Início</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Suporte</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="login+cadastro.html">Sair</a></li>
                 </li>
             </ul>
             <div class="dropdown-menu">
-                <a href="#">Início</a>
-                <a href="#">Sobre Nós</a>
-                <a href="#">Serviços</a>
-                <a href="#">Seja um Prestador</a>
-                <a href="#">Suporte</a>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Suporte</a></li>
                 <a href="perfil.html">Perfil</a>
                 <a href="login.html">Sair</a>
-            </div>        
+            </div>     
         </nav>
         <div class="hero-content">
-            <h1>Bem-vindo <span>à nossa plataforma</span></h1>
-            <p>Seu lar, seu bairro, seu mundo, com o profissional certo ao seu lado.</p>
+            <h1>"Descubra o Portal Civita:</h1>
+            <p>Civita: Conectando você a heróis interplanetários. Escolha seus prestadores de serviços, contate-os e avalie soluções estelares com facilidade!</p>
         </div>
     </header>
 
-    <div class="search-section">
+    <div class="search-section" id="servicos">
         <h2>Buscar Prestadores de Serviços</h2>
         <div class="filter-box">
             <div class="filter-item">
                 <label for="service-type">Tipo de Serviço</label>
                 <select id="service-type">
                     <option value="">Selecione o tipo</option>
-                    <option value="reforma">Reforma</option>
-                    <option value="limpeza">Limpeza</option>
+                    <option value="reformista">Reforma</option>
+                    <option value="limpador">Limpeza</option>
                     <option value="eletricista">Eletricista</option>
                     <option value="encanador">Encanador</option>
-                    <option value="jardinagem">Jardinagem</option>
+                    <option value="jardineiro">Jardineiro</option>
                 </select>
             </div>
             <div class="filter-item">
@@ -95,187 +82,73 @@ Copiar código
                 </select>
             </div>
             <div class="filter-item button-container">
-                <button class="search-button" onclick="filterProfession()">Continuar</button>
+                <button class="search-button" onclick="filterProfession()">Filtrar</button>
             </div>
         </div>
     </div>
+
+    <section class="service-lists">
+        <div class="container">
+            <h2 class="title" style="display: none;">Lista de Encanadores</h2>
+            <div class="encanadores-grid" style="display: none;"></div>
+        </div>
     
-    <div class="content-wrapper encanador-content" id="encanador-info" style="display: none;">
-        <button class="left">←</button>
-        <div class="profissao-info">
-            <p class="name">Adriano</p>
-            <p class="description">
-                Encanador especializado em sistemas de tubulação residencial e comercial.
-                Conhecido pela precisão e rapidez na solução de vazamentos e instalação de encanamentos modernos.
-            </p>
+        <div class="container">
+            <h2 class="title2" style="display: none;">Lista de Eletricistas</h2>
+            <div class="eletricistas-grid" style="display: none;"></div>
         </div>
-        <img src="./imgs/blue-a" alt="ambiente" class="ambiente" />
-        <img src="./imgs/enc1.png" alt="encanador" class="profissao" />
-        <div class="info-wrapper">
-            <div class="wrapper">
-                <p class="info">IDADE</p>
-                <span class="year">30 anos</span>
-            </div>
-            <div class="wrapper">
-                <p class="info">AVALIAÇÕES</p>
-                <span class="type">4.5 estrelas</span>
-            </div>
-            <div class="wrapper">
-                <p class="info">SERVIÇOS</p>
-                <span class="radius">Consultoria Técnica</span>
-            </div>
+    
+        <div class="container">
+            <h2 class="title3" style="display: none;">Lista de Reformistas</h2>
+            <div class="reformistas-grid" style="display: none;"></div>
         </div>
-        <button class="right">→</button>
-    </div>   
-
-    <div class="content-wrapper eletricista-content" id="eletricista-info" style="display: none;">
-        <button class="left">←</button>
-        <div class="profissao-info">
-            <p class="name">Carlos</p>
-            <p class="description">
-                Eletricista especializado em instalações residenciais
-                e comerciais. Conhecido pela segurança e eficiência
-                em resolver problemas elétricos
-            </p>
+    
+        <div class="container">
+            <h2 class="title4" style="display: none;">Lista de Limpadores</h2>
+            <div class="limpadores-grid" style="display: none;"></div>
         </div>
-        <img src="./imgs/bluea.jpg" alt="ambiente" class="ambiente" />
-        <img src="./imgs/eletri1.png" alt="eletricista" class="profissao" />
-        <div class="info-wrapper">
-            <div class="wrapper">
-                <p class="info">IDADE</p>
-                <span class="year">30 anos</span>
-            </div>
-            <div class="wrapper">
-                <p class="info">AVALIAÇÕES</p>
-                <span class="type">4.5 estrelas</span>
-            </div>
-            <div class="wrapper">
-                <p class="info">SERVIÇOS</p>
-                <span class="radius">Consultoria Técnica</span>
-            </div>
+    
+        <div class="container">
+            <h2 class="title5" style="display: none;">Lista de Jardineiros</h2>
+            <div class="jardineiros-grid" style="display: none;"></div>
         </div>
-        <button class="right">→</button>
-    </div>
-
-    <div class="content-wrapper reforma-content" id="reforma-info" style="display: none;">
-        <button class="left">←</button>
-        <div class="profissao-info">
-            <p class="name">Roberto</p>
-            <p class="description">
-                Especialista em reformas de ambientes internos e externos. 
-                Conhecido pela criatividade em projetos e pela entrega dentro do prazo.
-            </p>
-        </div>
-        <img src="./imgs/blue-a" alt="ambiente" class="ambiente" />
-        <img src="./imgs/reforma1.png" alt="reforma" class="profissao" />
-        <div class="info-wrapper">
-            <div class="wrapper">
-                <p class="info">IDADE</p>
-                <span class="year">40 anos</span>
-            </div>
-            <div class="wrapper">
-                <p class="info">AVALIAÇÕES</p>
-                <span class="type">4.8 estrelas</span>
-            </div>
-            <div class="wrapper">
-                <p class="info">SERVIÇOS</p>
-                <span class="radius">Reformas Completas e Pequenas Restaurações</span>
-            </div>
-        </div>
-        <button class="right">→</button>
-    </div>
-
-    <div class="content-wrapper jardinagem-content" id="jardinagem-info" style="display: none;">
-        <button class="left">←</button>
-        <div class="profissao-info">
-            <p class="name">Joana</p>
-            <p class="description">
-                Jardineira experiente em paisagismo e manutenção de jardins. 
-                Especialista em criar ambientes verdes harmônicos e agradáveis.
-            </p>
-        </div>
-        <img src="./imgs/blue-a" alt="ambiente" class="ambiente" />
-        <img src="./imgs/jardinagem1.png" alt="jardinagem" class="profissao" />
-        <div class="info-wrapper">
-            <div class="wrapper">
-                <p class="info">IDADE</p>
-                <span class="year">35 anos</span>
-            </div>
-            <div class="wrapper">
-                <p class="info">AVALIAÇÕES</p>
-                <span class="type">4.7 estrelas</span>
-            </div>
-            <div class="wrapper">
-                <p class="info">SERVIÇOS</p>
-                <span class="radius">Paisagismo e Jardinagem</span>
-            </div>
-        </div>
-        <button class="right">→</button>
-    </div>
-
-    <div class="content-wrapper limpeza-content" id="limpeza-info" style="display: none;">
-        <button class="left">←</button>
-        <div class="profissao-info">
-            <p class="name">Ana</p>
-            <p class="description">
-                Profissional de limpeza com experiência em residências e escritórios. 
-                Focada em eficiência e cuidado em cada detalhe do ambiente.
-            </p>
-        </div>
-        <img src="./imgs/blue-a" alt="ambiente" class="ambiente" />
-        <img src="./imgs/limpeza1.png" alt="limpeza" class="profissao" />
-        <div class="info-wrapper">
-            <div class="wrapper">
-                <p class="info">IDADE</p>
-                <span class="year">28 anos</span>
-            </div>
-            <div class="wrapper">
-                <p class="info">AVALIAÇÕES</p>
-                <span class="type">4.9 estrelas</span>
-            </div>
-            <div class="wrapper">
-                <p class="info">SERVIÇOS</p>
-                <span class="radius">Limpeza Geral e Pós-Obra</span>
-            </div>
-        </div>
-        <button class="right">→</button>
-    </div>
+    </section>    
     
     <section class="services">
         <h2>Alguns Serviços Que Oferecemos</h2>
         <div class="service-cards">
-            <div class="service-card1">
+            <div class="service-card">
                 <i class="fas fa-home"></i>
                 <h3>Limpeza Residencial e Comercial</h3>
             </div>
-            <div class="service-card2">
+            <div class="service-card">
                 <i class="fas fa-tools"></i>
                 <h3>Manutenção e Reparos Gerais</h3>
             </div>
-            <div class="service-card3">
+            <div class="service-card">
                 <i class="fas fa-seedling"></i>
                 <h3>Jardinagem e Paisagismo</h3>
             </div>
-            <div class="service-card4">
+            <div class="service-card">
                 <i class="fas fa-wheelchair"></i>
                 <h3>Cuidado e Acompanhamento de Idosos</h3>
             </div>
-            <div class="service-card5">
+            <div class="service-card">
                 <i class="fas fa-music"></i>
                 <h3>Suporte a Eventos e Festas Comunitárias</h3>
             </div>
-            <div class="service-card6">
+            <div class="service-card">
                 <i class="fas fa-baby"></i>
                 <h3>Babás e Cuidados Infantis</h3>
             </div>
         </div>
     </section>
 
-    <section class="sobre-nos">
+    <section class="sobre-nos" id="sobre-nos">
         <div class="sobre">
             <div class="conteudo">
                 <div class="sobre-imagem">
-                    <img src="imgs/pose (2).jpg" alt="Alien ilustrativo">
+                    <img src="imgs/Team work-amico.png" alt="Alien ilustrativo">
                 </div>
     
                 <div class="texto">
@@ -283,7 +156,7 @@ Copiar código
                     <p>Bem-vindo ao Portal Civita! Somos a plataforma que conecta habitantes de Civita a serviços rápidos e inovadores, facilitando soluções interplanetárias com apenas alguns cliques.</p>
                     <p>A nossa missão é tornar a vida mais simples, reunindo qualidade, confiança e acessibilidade em um só lugar. Acreditamos em um futuro colaborativo e eficiente, onde todos têm acesso a soluções de alta qualidade, independentemente de onde estejam.</p>
                     <h4>Junte-se a nós e descubra um universo de possibilidades!</h4>
-                    <p>Com uma interface intuitiva, oferecemos um espaço onde clientes podem agendar serviços e prestadores podem compartilhar suas habilidades com a comunidade. Seja você cliente ou prestador, estamos aqui para ajudar!</p>
+                    <p>Com uma interface intuitiva, oferecemos um espaço onde clientes podem encontrar e contatar profissionais qualificados, enquanto os prestadores podem compartilhar suas habilidades com a comunidade. Seja você cliente ou prestador, estamos aqui para ajudar!</p>
                 </div>
             </div>
         </div>
@@ -292,36 +165,54 @@ Copiar código
 
     <section class="values">
         <h2>Nossos Valores e os Pilares que Sustentam nosso Serviço</h2>
-        <div class="value-cards">
-            <div class="value-card">
-                <i class="fas fa-bullseye"></i>
-                <h3>Desempenho</h3>
-                <p>Nosso foco é entregar resultados de alta qualidade, sempre buscando superar expectativas.</p>
+        <div class="card">
+            <div class="box">
+                <div class="glass"></div>
+                <div class="content">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Desempenho</h3>
+                    <p>Nosso foco é entregar resultados de alta qualidade, sempre buscando superar expectativas.</p>
+                </div>
             </div>
-            <div class="value-card">
-                <i class="fas fa-users"></i>
-                <h3>Foco no Humano</h3>
-                <p>Valorizamos as pessoas, colocando suas necessidades e bem-estar em primeiro lugar.</p>
+            <div class="box">
+                <div class="glass"></div>
+                <div class="content">
+                    <i class="fas fa-users"></i>
+                    <h3>Foco no Humano</h3>
+                    <p>Valorizamos as pessoas, colocando suas necessidades e bem-estar em primeiro lugar.</p>
+                </div>
             </div>
-            <div class="value-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Crescimento</h3>
-                <p>Acreditamos na evolução contínua, incentivando o aprendizado e a inovação.</p>
+            <div class="box">
+                <div class="glass"></div>
+                <div class="content">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Crescimento</h3>
+                    <p>Acreditamos na evolução contínua, incentivando o aprendizado e a inovação.</p>
+                </div>
             </div>
-            <div class="value-card">
-                <i class="fas fa-handshake"></i>
-                <h3>Confiança</h3>
-                <p>Confiabilidade é nossa prioridade, honrando compromissos e cuidando de quem confia em nós.</p>
+            <div class="box">
+                <div class="glass"></div>
+                <div class="content">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Confiança</h3>
+                    <p>Confiabilidade é nossa prioridade, honrando compromissos e cuidando de quem confia em nós.</p>
+                </div>
             </div>
-            <div class="value-card">
-                <i class="fas fa-globe"></i>
-                <h3>Perspectiva Global</h3>
-                <p>Temos uma visão global, buscando soluções que gerem impacto positivo no mundo.</p>
+            <div class="box">
+                <div class="glass"></div>
+                <div class="content">
+                    <i class="fas fa-globe"></i>
+                    <h3>Perspectiva Global</h3>
+                    <p>Temos uma visão global, buscando soluções que gerem impacto positivo no mundo.</p>
+                </div>
             </div>
-            <div<div class="value-card">
-                <i class="fas fa-star"></i>
-                <h3>Excelência Profissional</h3>
-                <p>Profissionais qualificados, serviços precisos e satisfação garantida.</p>
+            <div class="box">
+                <div class="glass"></div>
+                <div class="content">
+                    <i class="fas fa-star"></i>
+                    <h3>Excelência Profissional</h3>
+                    <p>Profissionais qualificados, serviços precisos e satisfação garantida.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -365,27 +256,20 @@ Copiar código
         </div>
     </section>
 
-    <section class="contact">
-        <h2>Entre em Contato</h2>
+    <section class="contact" id="contato">
+        <h2 id="contato">Entre em Contato</h2>
         <form>
             <input type="text" placeholder="Nome">
             <input type="email" placeholder="Email">
             <textarea placeholder="Mensagem"></textarea>
             <button type="submit" class="btn">Enviar Mensagem</button>
         </form>
-    </section>
 
-    <div class="banner">
-        <div>
-            <h3>Torne-se um Prestador de Serviços</h3>
-            <p>Seja prestador só com alguns anúncios. Não precisa de um cartão de crédito!</p>
-        </div>
-        <button>Seja um Prestador</button>
-    </div>
+    </section>
 
     <footer>
         <p>© 2024 Astrosync - Todos os direitos reservados..</p>
     </footer>
-    <script src="../js/script.js"></script>  
+    <script src="../js/scripthome.js"></script>  
 </body>
 </html>
