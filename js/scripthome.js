@@ -1,5 +1,15 @@
+const menuIcon = document.getElementById('menu-icon');
+const menu = document.getElementById('menu');
+
+menuIcon.addEventListener('click', () => {
+    console.log("Menu icon clicado. Alterando visibilidade do menu.");
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+});
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Dados dos encanadores
+    console.log("Documento carregado. Inicializando dados dos profissionais.");
+
+    // dados dos encanadores
     const encanadoresData = [
         {
             name: "ADRIANO",
@@ -35,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // Dados dos eletricistas
+    // dados dos eletricistas
     const eletricistasData = [
         {
             name: "ELLEN",
@@ -107,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }        
     ];
 
-    // Dados dos limpadores
+    // dados dos limpadores
     const limpadoresData = [
         {
             name: "ANA",
@@ -118,7 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
             image: "./imgs/limpador1.jpg",
         },
         {
-              
             name: "CARLA",
             description: "Especialista em limpeza profunda e cuidados com ambientes comerciais e corporativos. Preza pela organização e qualidade no serviço.",
             year: "25",
@@ -142,8 +151,9 @@ document.addEventListener('DOMContentLoaded', () => {
             radius: "Limpeza Comercial e Eventos",
             image: "./imgs/limpador4.jpg",
         },
-      ];
-              // Dados dos jardineiros
+    ];
+
+    // dados dos jardineiros
     const jardineirosData = [
         {
             name: "JOANA",
@@ -179,6 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     ];
 
+    console.log("Dados dos profissionais carregados.");
 
     const titleElement = document.querySelector('.title');
     const encanadoresGrid = document.querySelector('.encanadores-grid');
@@ -190,10 +201,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const limpadoresGrid = document.querySelector('.limpadores-grid');
     const titleElement5 = document.querySelector('.title5');
     const jardineirosGrid = document.querySelector('.jardineiros-grid');
-
-    // Função para exibir os encanadores
+    
+    // função para exibir os encanadores
     function displayEncanadores(encanadoresData) {
-        encanadoresGrid.innerHTML = ''; // Limpa a grid antes de adicionar novos cards
+        encanadoresGrid.innerHTML = '';
         encanadoresData.forEach(encanador => {
             const encanadoresCard = document.createElement('div');
             encanadoresCard.classList.add('encanadores-card');
@@ -212,12 +223,12 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             encanadoresGrid.appendChild(encanadoresCard);
         });
-
-        // Adicionando evento de clique aos botões de contato para encanadores
+    
+      
         document.querySelectorAll('.contact-btn').forEach(button => {
             button.addEventListener('click', () => {
                 button.classList.toggle('active');
-
+    
                 if (button.classList.contains('active')) {
                     const randomNumber = Math.floor(100000000 + Math.random() * 900000000);
                     button.innerHTML = `${randomNumber}`;
@@ -227,50 +238,49 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
- // Função para exibir os eletricistas
-function displayEletricistas(eletricistasData) {
-    eletricistasGrid.innerHTML = ''; // Limpa a grid antes de adicionar novos cards
-    eletricistasData.forEach(professional => {
-        const card = document.createElement('div');
-        card.classList.add('eletricistas-card'); // Mudando para eletricistas-card
-        card.innerHTML = `
-            <img src="${professional.image}" alt="Imagem de ${professional.name}">
-            <div>
-                <h3>${professional.name}</h3>
-                <p>${professional.description}</p>
-                <p><strong>Idade:</strong> ${professional.year} anos</p>
-                <p><strong>Especialização:</strong> ${professional.radius}</p>
-                <div class="rating">
-                    <strong>Avaliação:</strong> ${generateStars(professional.type)}
+    
+    // função para exibir os eletricistas
+    function displayEletricistas(eletricistasData) {
+        eletricistasGrid.innerHTML = '';
+        eletricistasData.forEach(professional => {
+            const card = document.createElement('div');
+            card.classList.add('eletricistas-card');
+            card.innerHTML = `
+                <img src="${professional.image}" alt="Imagem de ${professional.name}">
+                <div>
+                    <h3>${professional.name}</h3>
+                    <p>${professional.description}</p>
+                    <p><strong>Idade:</strong> ${professional.year} anos</p>
+                    <p><strong>Especialização:</strong> ${professional.radius}</p>
+                    <div class="rating">
+                        <strong>Avaliação:</strong> ${generateStars(professional.type)}
+                    </div>
                 </div>
-            </div>
-            <button class="contact-btn"><i class="fas fa-phone-alt"></i> Contatar</button>
-        `;
-        eletricistasGrid.appendChild(card);
-    });
-
-    // Adicionando evento de clique aos botões de contato para eletricistas
-    document.querySelectorAll('.contact-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            button.classList.toggle('active');
-
-            if (button.classList.contains('active')) {
-                const randomNumber = Math.floor(100000000 + Math.random() * 900000000);
-                button.innerHTML = `${randomNumber}`;
-            } else {
-                button.innerHTML = '<i class="fas fa-phone-alt"></i> Contatar';
-            }
+                <button class="contact-btn"><i class="fas fa-phone-alt"></i> Contatar</button>
+            `;
+            eletricistasGrid.appendChild(card);
         });
-    });
-}
-
-    // Função para exibir os reformistas
+    
+        document.querySelectorAll('.contact-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+    
+                if (button.classList.contains('active')) {
+                    const randomNumber = Math.floor(100000000 + Math.random() * 900000000);
+                    button.innerHTML = `${randomNumber}`;
+                } else {
+                    button.innerHTML = '<i class="fas fa-phone-alt"></i> Contatar';
+                }
+            });
+        });
+    }
+    
+    // função para exibir os reformistas
     function displayReformistas(reformistasData) {
-        reformistasGrid.innerHTML = ''; // Limpa a grid antes de adicionar novos cards
+        reformistasGrid.innerHTML = '';
         reformistasData.forEach(professional => {
             const card = document.createElement('div');
-            card.classList.add('reformistas-card'); // Mudando para reformistas-card
+            card.classList.add('reformistas-card');
             card.innerHTML = `
                 <img src="${professional.image}" alt="Imagem de ${professional.name}">
                 <div>
@@ -286,12 +296,12 @@ function displayEletricistas(eletricistasData) {
             `;
             reformistasGrid.appendChild(card);
         });
+    
 
-        // Adicionando evento de clique aos botões de contato para reformistas
         document.querySelectorAll('.contact-btn').forEach(button => {
             button.addEventListener('click', () => {
                 button.classList.toggle('active');
-
+    
                 if (button.classList.contains('active')) {
                     const randomNumber = Math.floor(100000000 + Math.random() * 900000000);
                     button.innerHTML = `${randomNumber}`;
@@ -301,175 +311,169 @@ function displayEletricistas(eletricistasData) {
             });
         });
     }
-
-    // Função para exibir os limpadores
-function displayLimpadores(limpadoresData) {
-    limpadoresGrid.innerHTML = ''; // Limpa a grid antes de adicionar novos cards
-    limpadoresData.forEach(limpador => {
-        const limpadoresCard = document.createElement('div');
-        limpadoresCard.classList.add('limpadores-card');
-        limpadoresCard.innerHTML = `
-            <img src="${limpador.image}" alt="Imagem de ${limpador.name}">
-            <div>
-                <h3>${limpador.name}</h3>
-                <p>${limpador.description}</p>
-                <p><strong>Idade:</strong> ${limpador.year} anos</p>
-                <p><strong>Especialização:</strong> ${limpador.radius}</p>
-                <div class="rating">
-                    <strong>Avaliação:</strong> ${generateStars(limpador.type)}
+    
+    // função para exibir os limpadores
+    function displayLimpadores(limpadoresData) {
+        limpadoresGrid.innerHTML = '';
+        limpadoresData.forEach(limpador => {
+            const limpadoresCard = document.createElement('div');
+            limpadoresCard.classList.add('limpadores-card');
+            limpadoresCard.innerHTML = `
+                <img src="${limpador.image}" alt="Imagem de ${limpador.name}">
+                <div>
+                    <h3>${limpador.name}</h3>
+                    <p>${limpador.description}</p>
+                    <p><strong>Idade:</strong> ${limpador.year} anos</p>
+                    <p><strong>Especialização:</strong> ${limpador.radius}</p>
+                    <div class="rating">
+                        <strong>Avaliação:</strong> ${generateStars(limpador.type)}
+                    </div>
                 </div>
-            </div>
-            <button class="contact-btn"><i class="fas fa-phone-alt"></i> Contatar</button>
-        `;
-        limpadoresGrid.appendChild(limpadoresCard);
-    });
-
-    // Adicionando evento de clique aos botões de contato para limpadores
-    document.querySelectorAll('.contact-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            button.classList.toggle('active');
-
-            if (button.classList.contains('active')) {
-                const randomNumber = Math.floor(100000000 + Math.random() * 900000000);
-                button.innerHTML = `${randomNumber}`;
-            } else {
-                button.innerHTML = '<i class="fas fa-phone-alt"></i> Contatar';
-            }
+                <button class="contact-btn"><i class="fas fa-phone-alt"></i> Contatar</button>
+            `;
+            limpadoresGrid.appendChild(limpadoresCard);
         });
-    });
-}
+    
 
-// Função para exibir os jardineiros
-function displayJardineiros(jardineirosData) {
-    jardineirosGrid.innerHTML = ''; // Limpa a grid antes de adicionar novos cards
-    jardineirosData.forEach(jardineiro => {
-        const jardineirosCard = document.createElement('div');
-        jardineirosCard.classList.add('jardineiros-card');
-        jardineirosCard.innerHTML = `
-            <img src="${jardineiro.image}" alt="Imagem de ${jardineiro.name}">
-            <div>
-                <h3>${jardineiro.name}</h3>
-                <p>${jardineiro.description}</p>
-                <p><strong>Idade:</strong> ${jardineiro.year} anos</p>
-                <p><strong>Especialização:</strong> ${jardineiro.radius}</p>
-                <div class="rating">
-                    <strong>Avaliação:</strong> ${generateStars(jardineiro.type)}
-                </div>
-            </div>
-            <button class="contact-btn"><i class="fas fa-phone-alt"></i> Contatar</button>
-        `;
-        jardineirosGrid.appendChild(jardineirosCard);
-    });
-
-    // Adicionando evento de clique aos botões de contato para jardineiros
-    document.querySelectorAll('.contact-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            button.classList.toggle('active');
-
-            if (button.classList.contains('active')) {
-                const randomNumber = Math.floor(100000000 + Math.random() * 900000000);
-                button.innerHTML = `${randomNumber}`;
-            } else {
-                button.innerHTML = '<i class="fas fa-phone-alt"></i> Contatar';
-            }
+        document.querySelectorAll('.contact-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+    
+                if (button.classList.contains('active')) {
+                    const randomNumber = Math.floor(100000000 + Math.random() * 900000000);
+                    button.innerHTML = `${randomNumber}`;
+                } else {
+                    button.innerHTML = '<i class="fas fa-phone-alt"></i> Contatar';
+                }
+            });
         });
-    });
-}
-
-
-// Função de filtro para selecionar a profissão
-window.filterProfession = function () {
-    const serviceType = document.querySelector('#service-type').value;
-
-    // Exibe a lista de limpadores quando "limpador" for selecionado
-    if (serviceType === 'limpador') {
-        titleElement4.textContent = "Lista de Faxineiros";
-        titleElement4.style.display = 'block';
-        limpadoresGrid.style.display = 'grid';
-        displayLimpadores(limpadoresData);
-
-        // Esconde todas as outras grids e títulos
-        titleElement.style.display = 'none';
-        encanadoresGrid.style.display = 'none';
-        titleElement2.style.display = 'none';
-        eletricistasGrid.style.display = 'none';
-        titleElement3.style.display = 'none';
-        reformistasGrid.style.display = 'none';
-        jardineirosGrid.style.display = 'none';  // Esconde a grid de jardineiros
-    } 
-    // Exibe a lista de encanadores quando "encanador" for selecionado
-    else if (serviceType === 'encanador') {
-        titleElement.textContent = "Lista de Encanadores";
-        titleElement.style.display = 'block';
-        encanadoresGrid.style.display = 'grid';
-        displayEncanadores(encanadoresData);
-
-        // Esconde todas as outras grids e títulos
-        titleElement2.style.display = 'none';
-        eletricistasGrid.style.display = 'none';
-        titleElement3.style.display = 'none';
-        reformistasGrid.style.display = 'none';
-        titleElement4.style.display = 'none';
-        limpadoresGrid.style.display = 'none';
-        jardineirosGrid.style.display = 'none';  // Esconde a grid de jardineiros
-    } 
-    // Exibe a lista de eletricistas quando "eletricista" for selecionado
-    else if (serviceType === 'eletricista') {
-        titleElement2.textContent = "Lista de Eletricistas";
-        titleElement2.style.display = 'block';
-        eletricistasGrid.style.display = 'grid';
-        displayEletricistas(eletricistasData);
-
-        // Esconde todas as outras grids e títulos
-        titleElement.style.display = 'none';
-        encanadoresGrid.style.display = 'none';
-        titleElement3.style.display = 'none';
-        reformistasGrid.style.display = 'none';
-        titleElement4.style.display = 'none';
-        limpadoresGrid.style.display = 'none';
-        jardineirosGrid.style.display = 'none';  // Esconde a grid de jardineiros
-    } 
-    // Exibe a lista de reformistas quando "reformista" for selecionado
-    else if (serviceType === 'reformista') {
-        titleElement3.textContent = "Lista de Reformistas";
-        titleElement3.style.display = 'block';
-        reformistasGrid.style.display = 'grid';
-        displayReformistas(reformistasData);
-
-        // Esconde todas as outras grids e títulos
-        titleElement.style.display = 'none';
-        titleElement2.style.display = 'none';
-        encanadoresGrid.style.display = 'none';
-        eletricistasGrid.style.display = 'none';
-        titleElement4.style.display = 'none';
-        limpadoresGrid.style.display = 'none';
-        jardineirosGrid.style.display = 'none';  // Esconde a grid de jardineiros
-    } 
-    // Exibe a lista de jardineiros quando "jardineiro" for selecionado
-    else if (serviceType === 'jardineiro') {
-        titleElement5.textContent = "Lista de Jardineiros";
-        titleElement5.style.display = 'block';
-        jardineirosGrid.style.display = 'grid';
-        displayJardineiros(jardineirosData);
-
-        // Esconde todas as outras grids e títulos
-        titleElement.style.display = 'none';
-        titleElement2.style.display = 'none';
-        encanadoresGrid.style.display = 'none';
-        eletricistasGrid.style.display = 'none';
-        titleElement3.style.display = 'none';
-        reformistasGrid.style.display = 'none';
-        titleElement4.style.display = 'none';
-        limpadoresGrid.style.display = 'none';  // Esconde a grid de limpadores
     }
-};
-    // Função para gerar estrelas de avaliação
+    
+    // função para exibir os jardineiros
+    function displayJardineiros(jardineirosData) {
+        jardineirosGrid.innerHTML = '';
+        jardineirosData.forEach(jardineiro => {
+            const jardineirosCard = document.createElement('div');
+            jardineirosCard.classList.add('jardineiros-card');
+            jardineirosCard.innerHTML = `
+                <img src="${jardineiro.image}" alt="Imagem de ${jardineiro.name}">
+                <div>
+                    <h3>${jardineiro.name}</h3>
+                    <p>${jardineiro.description}</p>
+                    <p><strong>Idade:</strong> ${jardineiro.year} anos</p>
+                    <p><strong>Especialização:</strong> ${jardineiro.radius}</p>
+                    <div class="rating">
+                        <strong>Avaliação:</strong> ${generateStars(jardineiro.type)}
+                    </div>
+                </div>
+                <button class="contact-btn"><i class="fas fa-phone-alt"></i> Contatar</button>
+            `;
+            jardineirosGrid.appendChild(jardineirosCard);
+        });
+    
+   
+        document.querySelectorAll('.contact-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+    
+                if (button.classList.contains('active')) {
+                    const randomNumber = Math.floor(100000000 + Math.random() * 900000000);
+                    button.innerHTML = `${randomNumber}`;
+                } else {
+                    button.innerHTML = '<i class="fas fa-phone-alt"></i> Contatar';
+                }
+            });
+        });
+    }
+    
+    // função de filtro para selecionar a profissão
+    window.filterProfession = function () {
+        const serviceType = document.querySelector('#service-type').value;
+    
+        // exibe a lista de limpadores quando "limpador" for selecionado
+        if (serviceType === 'limpador') {
+            titleElement4.textContent = "Lista de Faxineiros";
+            titleElement4.style.display = 'block';
+            limpadoresGrid.style.display = 'grid';
+            displayLimpadores(limpadoresData);
+    
+            titleElement.style.display = 'none';
+            encanadoresGrid.style.display = 'none';
+            titleElement2.style.display = 'none';
+            eletricistasGrid.style.display = 'none';
+            titleElement3.style.display = 'none';
+            reformistasGrid.style.display = 'none';
+            titleElement5.style.display = 'none';
+        } 
+        // exibe a lista de encanadores quando "encanador" for selecionado
+        else if (serviceType === 'encanador') {
+            titleElement.textContent = "Lista de Encanadores";
+            titleElement.style.display = 'block';
+            encanadoresGrid.style.display = 'grid';
+            displayEncanadores(encanadoresData);
+    
+            titleElement2.style.display = 'none';
+            eletricistasGrid.style.display = 'none';
+            titleElement3.style.display = 'none';
+            reformistasGrid.style.display = 'none';
+            titleElement4.style.display = 'none';
+            limpadoresGrid.style.display = 'none';
+            titleElement5.style.display = 'none';
+        } 
+        // exibe a lista de eletricistas quando "eletricista" for selecionado
+        else if (serviceType === 'eletricista') {
+            titleElement2.textContent = "Lista de Eletricistas";
+            titleElement2.style.display = 'block';
+            eletricistasGrid.style.display = 'grid';
+            displayEletricistas(eletricistasData);
+    
+            titleElement.style.display = 'none';
+            encanadoresGrid.style.display = 'none';
+            titleElement3.style.display = 'none';
+            reformistasGrid.style.display = 'none';
+            titleElement4.style.display = 'none';
+            limpadoresGrid.style.display = 'none';
+            titleElement5.style.display = 'none';
+        } 
+        // exibe a lista de reformistas quando "reformista" for selecionado
+        else if (serviceType === 'reformista') {
+            titleElement3.textContent = "Lista de Reformistas";
+            titleElement3.style.display = 'block';
+            reformistasGrid.style.display = 'grid';
+            displayReformistas(reformistasData);
+    
+            titleElement.style.display = 'none';
+            encanadoresGrid.style.display = 'none';
+            titleElement2.style.display = 'none';
+            eletricistasGrid.style.display = 'none';
+            titleElement4.style.display = 'none';
+            limpadoresGrid.style.display = 'none';
+            titleElement5.style.display = 'none';
+        } 
+        // exibe a lista de jardineiros quando "jardineiro" for selecionado
+        else if (serviceType === 'jardineiro') {
+            titleElement5.textContent = "Lista de Jardineiros";
+            titleElement5.style.display = 'block';
+            jardineirosGrid.style.display = 'grid';
+            displayJardineiros(jardineirosData);
+    
+            titleElement.style.display = 'none';
+            encanadoresGrid.style.display = 'none';
+            titleElement2.style.display = 'none';
+            eletricistasGrid.style.display = 'none';
+            titleElement3.style.display = 'none';
+            reformistasGrid.style.display = 'none';
+            titleElement4.style.display = 'none';
+        }
+    };
+    
+    // função para gerar estrelas de avaliação
     function generateStars(rating) {
-        const score = parseFloat(rating); // Converte o valor em número
+        const score = parseFloat(rating);
         const fullStars = Math.floor(score);
         const halfStar = score - fullStars >= 0.5;
         let starsHtml = '';
-
+    
         for (let i = 0; i < fullStars; i++) {
             starsHtml += '<i class="fas fa-star"></i>';
         }
@@ -481,22 +485,18 @@ window.filterProfession = function () {
         }
         return starsHtml;
     }
+    
 
-    // Exibir encanadores por padrão ao carregar a página
     filterProfession();
-});
-
-// Seleciona todos os ícones com a classe .icon-circle
-document.querySelectorAll('.icon-circle').forEach(function(icon) {
-    icon.addEventListener('click', function() {
-      // Cria a mensagem dinamicamente com base no atributo 'data-message'
-      const messageText = icon.getAttribute('data-message');
-      const messageDiv = document.querySelector('.message');
-      
-      // Atualiza o conteúdo da mensagem
-      messageDiv.textContent = messageText;
-      
-      // Adiciona ou remove a classe 'show' para exibir a mensagem com animação
-      messageDiv.classList.toggle('show');
+    
+    // evento de clique nos ícones
+    document.querySelectorAll('.icon-circle').forEach(function(icon) {
+        icon.addEventListener('click', function() {
+            const messageText = icon.getAttribute('data-message');
+            const messageDiv = document.querySelector('.message');
+            
+            messageDiv.textContent = messageText;
+            messageDiv.classList.toggle('show');
+        });
     });
-  });  
+});    
