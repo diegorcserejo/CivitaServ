@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Civita Serv</title>
-    <link rel="stylesheet" href="css/styleshome.css">
-    <link rel="stylesheet" href="css/stylesperfil.css">
+    <link rel="stylesheet" href="/css/styleshome.css">
+    <link rel="stylesheet" href="/css/stylesperfil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -16,12 +16,12 @@
                 <i class="fas fa-bars"></i> 
             </div>
             <ul class="menu" id="menu">
-                <li><a href="home.html">Início</a></li>
+                <li><a href="home.php">Início</a></li>
                 <li><a href="#sobre-nos">Sobre Nós</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#contato">Suporte</a></li>
-                <li><a href="perfil.html">Perfil</a></li>
-                <li><a href="login+cadastro.html">Sair</a></li>
+                <li><a href="perfil.php">Perfil</a></li>
+                <li><a href="login+cadastro.php">Sair</a></li>
             </ul>
         </nav>
         <div class="hero-content">
@@ -33,7 +33,7 @@
     <section class="profile-section">
         <h2>Detalhes do perfil</h2>
         <div class="profile-picture">
-            <img id="profileImage" src="./imgs/jcicon.jpeg" alt="Foto do perfil">
+            <img id="profileImage" src="/imgs/jcicon.jpeg" alt="Foto do perfil">
             <input type="file" id="fileInput" style="display: none;" accept="image/*">
             <div class="buttons">
                 <button onclick="changePhoto()">Mudar foto</button>
@@ -85,6 +85,6 @@
         <p>© 2024 Astrosync - Todos os direitos reservados..</p>
     </footer>
     
-    <script src="../js/scriptperfil.js"></script>
+    <script src="/js/scriptperfil.js"></script>
 </body>
 </html>

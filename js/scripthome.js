@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "25",
             type: "4.8",
             radius: "Reparos Emergenciais e Instalações",
-            image: './imgs/enc1.jpg'
+            image: '/imgs/enc1.jpg'
         },
         {
             name: "BETO",
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "33",
             type: "4.5",
             radius: "Desentupimentos e Drenagem",
-            image: './imgs/enc2.jpg'
+            image: '/imgs/enc2.jpg'
         },
         {
             name: "JOÃO",
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "21",
             type: "4.9",
             radius: "Soluções Sustentáveis e Inovadoras",
-            image: './imgs/enc3.png'
+            image: '/imgs/enc3.png'
         },
         {
             name: "SÁVIO",
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "34",
             type: "4.7",
             radius: "Projetos Hidráulicos e Grandes Obras",
-            image: './imgs/enc4.png'
+            image: '/imgs/enc4.png'
         }
     ];
 
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "28",
             type: "4.8",
             radius: "Instalações e Reparos Elétricos",
-            image: './imgs/eletri1.jpg',
+            image: '/imgs/eletri1.jpg',
         },
         {
             name: "MARCOS",
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "20",
             type: "4.6",
             radius: "Manutenção e Correção de Curto-circuitos",
-            image: './imgs/eletri2.jpg',
+            image: '/imgs/eletri2.jpg',
         },
         {
             name: "RICARDO",
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "30",
             type: "4.9",
             radius: "Energia Solar e Sustentabilidade",
-            image: "./imgs/eletri3.jpg", 
+            image: "/imgs/eletri3.jpg", 
         },
         {
             name: "ANTÔNIO",
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "25",
             type: "4.7",
             radius: "Projetos Elétricos para Grandes Estruturas",
-            image: "./imgs/eletri4.png", 
+            image: "/imgs/eletri4.png", 
         },
     ];
 
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "30",
             type: "4.8 estrelas",
             radius: "Reformas Completas e Pequenas Restaurações",
-            image: "./imgs/reforma1.png",
+            image: "/imgs/reforma1.png",
         },
         {
             name: "GUSTAVO",
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "25",
             type: "4.7 estrelas",
             radius: "Reparos Estruturais",
-            image: "./imgs/reforma2.png",
+            image: "/imgs/reforma2.png",
         },
         {
             name: "DEBORA",
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "39",
             type: "4.8 estrelas",
             radius: "Design de Interiores e Reformas",
-            image: "./imgs/reforma3.jpg",
+            image: "/imgs/reforma3.jpg",
         },
         {
             "name": "ADRIANE",
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "year": "31",
             "type": "4.9 estrelas",
             "radius": "Reformas Criativas e Sustentáveis",
-            "image": "./imgs/reforma4.png"
+            "image": "/imgs/reforma4.png"
         }        
     ];
 
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "28",
             type: "4.9 estrelas",
             radius: "Limpeza Geral e Pós-Obra",
-            image: "./imgs/limpador1.jpg",
+            image: "/imgs/limpador1.jpg",
         },
         {
             name: "CARLA",
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "25",
             type: "4.7 estrelas",
             radius: "Limpeza Corporativa e Comercial",
-            image: "./imgs/limpador2.jpg",
+            image: "/imgs/limpador2.jpg",
         },
         {
             name: "MARIO",
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "22",
             type: "4.8 estrelas",
             radius: "Limpeza Pós-Obra e Renovação",
-            image: "./imgs/limpador3.jpg",
+            image: "/imgs/limpador3.jpg",
         },
         {
             name: "PAULA",
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "28",
             type: "4.6 estrelas",
             radius: "Limpeza Comercial e Eventos",
-            image: "./imgs/limpador4.jpg",
+            image: "/imgs/limpador4.jpg",
         },
     ];
 
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "25",
             type: "4.7 estrelas",
             radius: "Paisagismo e Manutenção",
-            image: "./imgs/jardinagem1.png",
+            image: "/imgs/jardinagem1.png",
         },
         {
             name: "CÉLIO",
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "28",
             type: "4.8 estrelas",
             radius: "Revitalização e Plantio",
-            image: "./imgs/jardinagem2.png",
+            image: "/imgs/jardinagem2.png",
         },
         {
             name: "FLAVIA",
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "25",
             type: "4.7 estrelas",
             radius: "Instalação de Irrigação",
-            image: "./imgs/jardinagem3.png",
+            image: "/imgs/jardinagem3.png",
         },
         {
             name: "MARCELO",
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
             year: "30",
             type: "4.8 estrelas",
             radius: "Poda e Controle de Pragas",
-            image: "./imgs/jardinagem4.png",
+            image: "/imgs/jardinagem4.png",
         },
     ];
 

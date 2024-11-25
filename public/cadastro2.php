@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Civita Serv</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
-    <link rel="stylesheet" href="css/stylescad2.css">
+    <link rel="stylesheet" href="/css/stylescad2.css">
 </head>
 <body>
     <div class="container">
@@ -33,6 +33,6 @@
             </div>
         </div>
     </div>
-    <script src="../js/scriptcad2.js"></script>
+    <script src="/js/scriptcad2.js"></script>
 </body>
 </html>

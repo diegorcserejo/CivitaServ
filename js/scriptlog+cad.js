@@ -50,7 +50,7 @@ document.getElementById('login-btn').addEventListener('click', function (event) 
 
     if (email && password) {
         console.log("Login bem-sucedido. Redirecionando para home.");
-        window.location.href = 'home.html';
+        window.location.href = 'home.php';
     } else {
         console.log("Campos de login não preenchidos corretamente.");
         alert('Preencha todos os campos!');
@@ -75,7 +75,7 @@ document.getElementById('next-btn').addEventListener('click', function (event) {
     if (fullName && email && password && confirmPassword) {
         if (password === confirmPassword) {
             console.log("Senhas coincidem. Redirecionando para cadastro2.");
-            window.location.href = 'cadastro2.html';
+            window.location.href = 'cadastro2.php';
         } else {
             console.log("As senhas não coincidem.");
             alert('As senhas não coincidem!');

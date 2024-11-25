@@ -34,8 +34,8 @@ document.getElementById("botao-continuar").addEventListener("click", function() 
     var tipoSelecionado = document.querySelector('input[name="tipo"]:checked');
     
     if (tipoSelecionado) {
-        console.log("Redirecionando para 'cadastro3.html' com tipo selecionado: ", tipoSelecionado.value);
-        window.location.href = "cadastro3.html"; 
+        console.log("Redirecionando para 'cadastro3.php' com tipo selecionado: ", tipoSelecionado.value);
+        window.location.href = "cadastro3.php"; 
     } else {
         console.log("Tentativa de continuar sem seleção.");
         alert("Por favor, selecione uma opção antes de continuar.");

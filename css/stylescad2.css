@@ -11,7 +11,7 @@
 }
 
 body {
-    background: url("../imgs/5525305.jpg") no-repeat center center fixed;
+    background: url("/imgs/5525305.jpg") no-repeat center center fixed;
     background-size: cover;
     display: flex;
     align-items: center;

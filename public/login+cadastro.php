@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login+Cadastro</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/styleslog+cad.css">
+    <link rel="stylesheet" href="/css/styleslog+cad.css">
 </head>
 <body>
     <div class="form-container">
@@ -111,6 +111,6 @@
             </div>
         </div>
     </div>
-    <script src="../js/scriptlog+cad.js"></script>
+    <script src="/js/scriptlog+cad.js"></script>
 </body>
 </html>

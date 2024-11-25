@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esqueceu Sua Senha</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
-    <link rel="stylesheet" href="css/stylesesqsenha.css">
+    <link rel="stylesheet" href="/css/stylesesqsenha.css">
 </head>
 <body>
     <div class="container">
@@ -22,6 +22,6 @@
             </div>
         </div>
     </div>
-    <script src="..js/scriptesqsenha.js"></script>
+    <script src="/js/scriptesqsenha.js"></script>
 </body>
 </html>

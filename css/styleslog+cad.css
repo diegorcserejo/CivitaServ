@@ -11,7 +11,7 @@
 }
 
 body {
-    background: url("../imgs/5525305.jpg");
+    background: url("/imgs/5525305.jpg");
     background-position: center; 
     background-size: cover;
     background-attachment: fixed;
