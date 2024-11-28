@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('/imgs/5525305.jpg') no-repeat center center fixed;
+    background: url('../imgs/5525305.jpg') no-repeat center center fixed;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.7);
 }

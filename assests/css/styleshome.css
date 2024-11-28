@@ -20,7 +20,7 @@ button.search-button {
 
 header.hero-section {
     background-size: cover;
-    background-image: url('/imgs/5525305.jpg');
+    background-image: url('../imgs/5525305.jpg');
     padding: 0; 
     text-align: center;
     position: relative;
@@ -701,7 +701,7 @@ select, input[type="text"], input[type="date"] {
 
 .sobre-nos {
     background-size: cover;
-    background-image: url('./imgs/Frame\ 10.png');
+    background-image: url('../imgs/Frame\ 10.png');
     padding: 20px 10px; 
     text-align: center;
     font-family: 'Exo 2', sans-serif;

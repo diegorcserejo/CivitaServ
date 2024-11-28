@@ -26,7 +26,7 @@ document.getElementById("fileInput").addEventListener("change", function(event) 
 
 function removePhoto() {
     console.log("Foto removida. Resetando imagem de perfil.");
-    document.getElementById("profileImage").src = "/imgs/desconhecido.png";
+    document.getElementById("profileImage").src = "./imgs/desconhecido.png";
     document.getElementById("fileInput").value = ''; 
 }
 

@@ -20,8 +20,8 @@ document.getElementById('informacoes-adicionais-form').addEventListener('submit'
         document.getElementById('sucesso').style.display = 'block';
 
         setTimeout(function() {
-            console.log("Redirecionando para 'login+cadastro.php'...");
-            window.location.href = 'login+cadastro.php';
+            console.log("Redirecionando para 'login.html'...");
+            window.location.href = 'login.html';
         }, 2000);  
     } else {
         console.log("Campos obrigatórios não preenchidos. Exibindo alerta.");
@@ -30,6 +30,6 @@ document.getElementById('informacoes-adicionais-form').addEventListener('submit'
 });
 
 document.getElementById('voltar-botao').addEventListener('click', function() {
-    console.log("Botão 'Voltar' clicado. Redirecionando para 'login+cadastro.php'.");
-    window.location.href = 'login+cadastro.php';
+    console.log("Botão 'Voltar' clicado. Redirecionando para 'login.html'.");
+    window.location.href = 'login.html';
 });
